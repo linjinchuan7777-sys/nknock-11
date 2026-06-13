@@ -662,8 +662,8 @@ export const DEFAULT_WARDROBE_ITEMS = ${JSON.stringify(wardrobeItems, null, 2)};
     }
   };
 
-  // --- Render Auth View if not Logged In ---
-  if (!isLoggedIn) {
+  // --- Render Auth View if not Logged In OR if we need to show Profile Setup ---
+  if (!isLoggedIn || showSetup) {
     return (
       <AuthView 
         user={user}
